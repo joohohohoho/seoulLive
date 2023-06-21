@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="seouliveOralce" uuid="53491dfe-7d2e-4ae4-9cdb-a2823cca736c">
+      <driver-ref>oracle.19</driver-ref>
+      <synchronize>true</synchronize>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@o9o6yubutmsjch3b_high?TNS_ADMIN=$PROJECT_DIR$/../../../../../opt/Wallet_O9O6YUBUTMSJCH3B</jdbc-url>
+      <jdbc-additional-properties>
+        <property name="TNSADMIN_DIR" value="C:\u01\oracle\product\19.3.0\dbhome\network\admin" />
+      </jdbc-additional-properties>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>

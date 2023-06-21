@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.zerock.seoulive.board.course.mapper.CourseBoardMapper">
+
+   
+        
+        
+    <insert id="insert">
+        
+        <!-- <selectKey keyProperty="seq" order="BEFORE" resultType="int"> -->
+        <!-- <selectKey keyProperty="seq" order="AFTER" resultType="int"> -->
+        <!-- select "ISEQ$$_74406".NEXTVAL,"ISEQ$$_74406".CURRVAL from dual 
+        select "ISEQ$$_74406".CURRVAL from dual
+        </selectKey>  -->
+
+        INSERT INTO tbl_course (seq,writer, title, review, total, write_Date, duration_Start, duration_End) 
+        VALUES (#{seq},#{writer}, #{title}, #{review}, #{total}, #{write_Date}, #{duration_Start}, #{duration_End})
+    </insert>
+
+<!-- <select id="select" resultType="org.zerock.seoulive.board.course.domain.tbl_courseDTO"> -->
+    <select id="select" resultType="org.zerock.seoulive.board.course.domain.tbl_courseVO">
+        SELECT * 
+        FROM tbl_course 
+        WHERE seq = #{seq}
+    </select>
+
+    <delete id="delete">
+        DELETE FROM tbl_course
+        WHERE seq = #{seq}
+    </delete>
+
+    <update id="update">
+        UPDATE tbl_course 
+        SET title=#{title}, 
+            review=#{review}, 
+            writer=#{writer}, 
+            modify_date=current_date
+        WHERE seq = #{seq}
+    </update>
+
+</mapper>
